@@ -13,22 +13,23 @@ int print_decimal(va_list arr)
 
 	count = 0;
 	numbers = va_arg(arr, int);
+
 	if (numbers < 0)
 	{
 		one = (numbers * -1);
 		count += _putchar(45);
 	}
 	else
-	{
 		one = numbers;
-		two = one;
-		three = 1;
-	}
+	two = one;
+	three = 1;
+
 	while (two > 9)
 	{
 		two /= 10;
 		three *= 10;
 	}
+
 	while (three >= 1)
 	{
 		count += _putchar(((one / three) % 10) + '0');

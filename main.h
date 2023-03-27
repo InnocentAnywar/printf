@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 /**
- * struct convs - struct for printer functions
+ * struct conv - struct for printer functions
  * @type
  * @c: flag
  * @f: function
