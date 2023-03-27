@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# ignore main file
+*main.c
+*.o
