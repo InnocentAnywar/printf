@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -11,7 +12,7 @@
  * @c: flag
  * @f: function
  */
-typedef struct convs
+typedef struct conv
 {
 	char *c;
 	int (*f)(va_list);
