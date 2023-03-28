@@ -31,7 +31,6 @@ int print_uni(va_list arr);
 int print_octal(va_list arr);
 int print_hex(va_list arr);
 int print_HEX(va_list arr);
-int print_STRING(va_list arr);
 int _puts(char *str);
 
 #endif /* MAIN_H */
