@@ -15,7 +15,7 @@ int print_STRING(va_list arr)
 	str = va_arg(arr, char *);
 	if (str == NULL)
 	{
-		str = "(null)"
+		str = "(null)";
 	}
 	for (i = 0; str[i]; i++)
 	{
@@ -32,7 +32,7 @@ int print_STRING(va_list arr)
 		}
 		else
 		{
-			count += _putchar(s[i]);
+			count += _putchar(str[i]);
 		}
 	}
 	return (count);
