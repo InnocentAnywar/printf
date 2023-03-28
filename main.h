@@ -9,7 +9,6 @@
 
 /**
  * struct conv - struct for printer functions
- * @type
  * @c: flag
  * @f: function
  */
