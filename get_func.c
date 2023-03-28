@@ -20,6 +20,7 @@ int (*get_func(char s))(va_list)
 		{"b", print_binary},
 		{"u", print_uni},
 		{"o", print_octal},
+		{"x", print_hex},
 		{NULL, NULL}
 	};
 
