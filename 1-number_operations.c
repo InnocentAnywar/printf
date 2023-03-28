@@ -49,3 +49,29 @@ int print_int(va_list arr)
 {
 	return (print_decimal(arr));
 }
+
+/**
+ * print_uni - prints unsigned integers
+ * @arr: stores list of arguments
+ * Return: number of arguments printed
+ */
+int print_uni(va_list arr)
+{
+	unsigned int n, count, count_stat, num;
+
+	num = va_arg(arr, int);
+	count = 0;
+	n = num;
+	count_stat = 1;
+	while (n > 9)
+	{
+		n /= 10;
+		count_stat *= 10;
+	}
+	while (count_stat >= 1)
+	{
+		count += _putchar(((num / count_stat) % 10) + '0');
+		count_stat /= 10;
+	}
+	return (count);
+}
