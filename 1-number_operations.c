@@ -20,7 +20,9 @@ int print_decimal(va_list arr)
 		count += _putchar(45);
 	}
 	else
+	{
 		one = numbers;
+	}
 	two = one;
 	three = 1;
 
