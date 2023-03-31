@@ -102,6 +102,7 @@ int print_HEX(va_list arr)
 	while (num != 0)
 	{
 		unsigned int remainder = num % 16;
+
 		if (remainder < 10)
 			buffer[i++] = 48 + remainder;
 		else
