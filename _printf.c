@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	{
 		int i;
 		va_list arr;
-		int (*o)(va_list);
+		int (*s)(va_list);
 
 		va_start(arr, format);
 		if (format[0] == '%' && format[1] == '\0')
@@ -32,8 +32,14 @@ int _printf(const char *format, ...)
 				}
 				else if (format[i + 1] != '\0')
 				{
-					o = get_func(format[i + 1]);
-					count += (o ? o(arr) : _putchar(format[i]) + _putchar(format[i + 1]));
+					s = get_func(format[i + 1]);
+					if (s)
+						count += s(arr);
+					else
+					{
+						count += _putchar(format[i]);
+						count += _putchar(format[i + 1]);
+					}
 					i++;
 				}
 			}

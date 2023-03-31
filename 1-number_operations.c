@@ -8,34 +8,32 @@
 
 int print_decimal(va_list arr)
 {
-	unsigned int one, two, three, count;
-	int numbers;
+	unsigned int n, count, count_stat, num_abs;
+	int num;
 
+	num = va_arg(arr, int);
 	count = 0;
-	numbers = va_arg(arr, int);
 
-	if (numbers < 0)
+	if (num < 0)
 	{
-		one = (numbers * -1);
-		count += _putchar(45);
+		num_abs = (num * -1);
+		count += _putchar('-');
 	}
 	else
-	{
-		one = numbers;
-	}
-	two = one;
-	three = 1;
+		num_abs = num;
 
-	while (two > 9)
+	n = num_abs;
+	count_stat = 1;
+	while (n > 9)
 	{
-		two /= 10;
-		three *= 10;
+		n /= 10;
+		count_stat *= 10;
 	}
 
-	while (three >= 1)
+	while (count_stat >= 1)
 	{
-		count += _putchar(((one / three) % 10) + '0');
-		three /= 10;
+		count += _putchar(((num_abs / count_stat) % 10) + '0');
+		count_stat /= 10;
 	}
 	return (count);
 }
